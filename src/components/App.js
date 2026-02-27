@@ -9,17 +9,17 @@ const App = () => {
     <BrowserRouter>
       <nav>
         <ul>
-          {/* Tests pass karne ke liye exact id dena zaroori hai */}
-          <li><Link to="/" id="form-link">Form Layout (No Logic)</Link></li>
-          <li><Link to="/ref" id="form-ref-link">Form using useRef</Link></li>
-          <li><Link to="/state" id="form-state-link">Form using useState</Link></li>
+          <li><Link to="/form" id="form-link">Form Layout (No Logic)</Link></li>
+          <li><Link to="/form-ref" id="form-ref-link">Form using useRef</Link></li>
+          <li><Link to="/form-state" id="form-state-link">Form using useState</Link></li>
         </ul>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Form />} />
-        <Route path="/ref" element={<FormRef />} />
-        <Route path="/state" element={<FormState />} />
+        {/* Routes ko bhi matching paths de diye */}
+        <Route path="/form" element={<Form />} />
+        <Route path="/form-ref" element={<FormRef />} />
+        <Route path="/form-state" element={<FormState />} />
       </Routes>
     </BrowserRouter>
   );
